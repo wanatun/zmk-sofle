@@ -37,7 +37,7 @@
     HomeRowMod_LftCmd: HomeRowMod_LftCmd {
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROWMOD_LFTCMD";
-        bindings = <&kp>, <&key_repeat>;
+        bindings = <&Lft_CMD_HomeRow_Mod>, <&key_repeat>;
 
         #binding-cells = <2>;
         tapping-term-ms = <200>;
@@ -142,6 +142,13 @@
             #binding-cells = <0>;
             bindings = <&kp RC(LC(DOWN))>;
             label = "M10";
+        };
+
+        Lft_CMD_HomeRow_Mod: Lft_CMD_HomeRow_Mod {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI>;
+            label = "LFT_CMD_HOMEROW_MOD";
         };
     };
 
