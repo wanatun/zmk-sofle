@@ -34,6 +34,17 @@
         tap-ms = <100>;
     };
 
+    HomeRowMod_LftCmd: HomeRowMod_LftCmd {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOMEROWMOD_LFTCMD";
+        bindings = <&kp>, <&key_repeat>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <200>;
+        hold-trigger-key-positions = <30>;
+    };
+
     macros {
         M14: M14 {
             compatible = "zmk,behavior-macro";
