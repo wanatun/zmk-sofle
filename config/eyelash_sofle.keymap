@@ -34,21 +34,6 @@
         tap-ms = <100>;
     };
 
-    LEFT_GUI: kp {
-        compatible = "zmk,behavior-hold-tap";
-        label = "LEFT_GUI";
-        bindings = <&kp>, <&key_repeat>;
-
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick-tap-ms = <50>;
-        hold-trigger-key-positions = <30>;
-        flavor = "hold-preferred";
-        hold-while-undecided;
-        hold-while-undecided-linger;
-        retro-tap;
-    };
-
     macros {
         M14: M14 {
             compatible = "zmk,behavior-macro";
@@ -147,46 +132,12 @@
             bindings = <&kp RC(LC(DOWN))>;
             label = "M10";
         };
-
-        Lft_CMD_HomeRow_Mod: Lft_CMD_HomeRow_Mod {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI>;
-            label = "LFT_CMD_HOMEROW_MOD";
-        };
-
-        CmdTab: CmdTap {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(TAB)>;
-            label = "CMDTAP";
-        };
-
-        CmdShftTab: CmdShftTab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LS(TAB))>;
-            label = "CMDSHFTTAB";
-        };
     };
 
     behaviors {
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        FDCombo {
-            bindings = <&mo 4>;
-            key-positions = <30 29>;
-            layers = <0>;
-        };
-
-        DSCombo {
-            bindings = <&kp LG(LS(TAB))>;
-            key-positions = <29 28>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
