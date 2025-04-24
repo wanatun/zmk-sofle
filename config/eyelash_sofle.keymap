@@ -34,29 +34,19 @@
         tap-ms = <100>;
     };
 
-    HoldCmdShftTab: HoldCmdShftTab {
+    LEFT_GUI: kp {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOLDCMDSHFTTAB";
-        bindings = <&CmdShftTab>, <&key_repeat>;
+        label = "LEFT_GUI";
+        bindings = <&kp>, <&key_repeat>;
 
         #binding-cells = <2>;
-        tapping-term-ms = <100>;
-        quick-tap-ms = <0>;
-        hold-trigger-key-positions = <29>;
-        flavor = "balanced";
-        hold-while-undecided;
-    };
-
-    FKeyHoldCtlTab: new_behavior {
-        compatible = "zmk,behavior-hold-tap";
-        label = "NEW_BEHAVIOR";
-        bindings = <&CmdTab>, <&key_repeat>;
-
-        #binding-cells = <2>;
-        flavor = "balanced";
-        tapping-term-ms = <100>;
-        hold-while-undecided;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <50>;
         hold-trigger-key-positions = <30>;
+        flavor = "hold-preferred";
+        hold-while-undecided;
+        hold-while-undecided-linger;
+        retro-tap;
     };
 
     macros {
@@ -203,11 +193,11 @@
 
         layer0 {
             bindings = <
-&kp ESC     &kp N1     &kp N2        &kp N3     &kp N4   &kp N5    &kp UP_ARROW     &kp N6  &kp N7     &kp N8         &kp N9   &kp N0    &kp TILDE
-&kp TAB     &kp Q      &kp W         &kp E      &kp R    &kp T     &kp DOWN_ARROW   &kp Y   &kp U      &kp I          &kp O    &kp P     &kp MINUS
-&kp LCTRL   &kp A      &kp S         &kp D      &kp F    &kp G     &kp LEFT_ARROW   &kp H   &kp J      &kp K          &kp L    &kp SEMI  &kp APOS
-&kp LSHFT   &kp Z      &kp X         &kp C      &kp V    &kp B     &kp RIGHT_ARROW  &kp N   &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp LEFT_ALT
-&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp ENTER  &kp DEL  &mo 2     &kp ENTER        &mo 1   &kp SPACE  &kp BACKSPACE  &mo 3    &mo 2
+&kp ESC     &kp N1     &kp N2        &kp N3     &kp N4      &kp N5    &kp UP_ARROW     &kp N6  &kp N7     &kp N8         &kp N9   &kp N0    &kp TILDE
+&kp TAB     &kp Q      &kp W         &kp E      &kp R       &kp T     &kp DOWN_ARROW   &kp Y   &kp U      &kp I          &kp O    &kp P     &kp MINUS
+&kp LCTRL   &kp A      &kp S         &kp D      &mt LCMD F  &kp G     &kp LEFT_ARROW   &kp H   &kp J      &kp K          &kp L    &kp SEMI  &kp APOS
+&kp LSHFT   &kp Z      &kp X         &kp C      &kp V       &kp B     &kp RIGHT_ARROW  &kp N   &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp LEFT_ALT
+&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp ENTER  &kp DEL     &mo 2     &kp ENTER        &mo 1   &kp SPACE  &kp BACKSPACE  &mo 3    &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -253,11 +243,11 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans       &trans   &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans       &trans   &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &CmdShftTab  &CmdTab  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans       &trans   &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans       &trans   &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans   &trans       &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans   &trans       &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &kp LCMD  &trans    &trans  &trans  &kp TAB  &kp LS(TAB)  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans   &trans       &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans   &trans       &trans  &trans
             >;
         };
     };
