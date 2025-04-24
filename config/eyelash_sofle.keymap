@@ -187,7 +187,7 @@
         compatible = "zmk,combos";
 
         FDCombo {
-            bindings = <&kp LG(TAB)>;
+            bindings = <&mo 4>;
             key-positions = <30 29>;
             layers = <0>;
         };
@@ -249,6 +249,16 @@
             >;
 
             sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB))>;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans       &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans       &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &CmdShftTab  &CmdTab  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans       &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans       &trans   &trans  &trans
+            >;
         };
     };
 };
