@@ -262,6 +262,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [30, 29]
-  k: '&CmdTab'
+  k: Gui+$$mdi:keyboard-tab$$
+  l: [LAYER0]
 - p: [29, 28]
-  k: '&CmdShftTab'
+  k: Gui+Sft+$$mdi:keyboard-tab$$
