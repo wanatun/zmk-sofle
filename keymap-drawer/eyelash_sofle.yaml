@@ -260,3 +260,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [30, 29]
+  k: '&CmdTab'
+- p: [29, 28]
+  k: '&CmdShftTab'
