@@ -21,24 +21,24 @@ layers:
   - R
   - T
   - $$mdi:arrow-down-bold$$
-  - Y
+  - {t: Y, h: '$$mdi:keyboard-tab-reverse$$'}
   - U
   - I
   - O
   - P
   - {t: '-', s: _}
   - $$mdi:apple-keyboard-control$$
-  - A
-  - S
-  - D
+  - {t: A, h: Ctl+A}
+  - {t: S, h: Alt+S}
+  - {t: D, h: Sft+D}
   - {t: F, h: '$$mdi:apple-keyboard-command$$'}
   - G
   - $$mdi:arrow-left-bold$$
-  - H
-  - J
-  - K
-  - L
-  - {t: ;, s: ':'}
+  - {t: H, h: '$$mdi:keyboard-tab$$'}
+  - {t: J, h: Gui+J}
+  - {t: K, h: Sft+K}
+  - {t: L, h: AltGr+L}
+  - {t: ;, h: Ctl+;, s: ':'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - Z
