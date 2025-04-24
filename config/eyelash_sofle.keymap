@@ -34,28 +34,29 @@
         tap-ms = <100>;
     };
 
-    HomeRowMod_CmdTab: HomeRowMod_CmdTab {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROWMOD_CMDTAB";
-        bindings = <&CmdTab>, <&key_repeat>;
-
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick-tap-ms = <200>;
-        hold-trigger-key-positions = <30>;
-        hold-trigger-on-release;
-    };
-
     HoldCmdShftTab: HoldCmdShftTab {
         compatible = "zmk,behavior-hold-tap";
         label = "HOLDCMDSHFTTAB";
         bindings = <&CmdShftTab>, <&key_repeat>;
 
         #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick-tap-ms = <200>;
+        tapping-term-ms = <100>;
+        quick-tap-ms = <0>;
         hold-trigger-key-positions = <29>;
-        hold-trigger-on-release;
+        flavor = "balanced";
+        hold-while-undecided;
+    };
+
+    FKeyHoldCtlTab: new_behavior {
+        compatible = "zmk,behavior-hold-tap";
+        label = "NEW_BEHAVIOR";
+        bindings = <&CmdTab>, <&key_repeat>;
+
+        #binding-cells = <2>;
+        flavor = "balanced";
+        tapping-term-ms = <100>;
+        hold-while-undecided;
+        hold-trigger-key-positions = <30>;
     };
 
     macros {
@@ -186,12 +187,13 @@
         compatible = "zmk,combos";
 
         FDCombo {
-            bindings = <&CmdTab>;
+            bindings = <&kp LG(TAB)>;
             key-positions = <30 29>;
+            layers = <0>;
         };
 
         DSCombo {
-            bindings = <&CmdShftTab>;
+            bindings = <&kp LG(LS(TAB))>;
             key-positions = <29 28>;
         };
     };
