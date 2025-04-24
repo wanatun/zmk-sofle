@@ -36,9 +36,9 @@ layers:
   - $$mdi:arrow-left-bold$$
   - {t: H, h: '$$mdi:keyboard-tab$$'}
   - {t: J, h: Gui+J}
-  - {t: K, h: Sft+K}
-  - {t: L, h: AltGr+L}
-  - {t: ;, h: Ctl+;, s: ':'}
+  - {t: K, h: Sft+Sft+K}
+  - {t: L, h: AltGr+Alt+L}
+  - {t: ;, h: Ctl+Ctl+;, s: ':'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - Z
