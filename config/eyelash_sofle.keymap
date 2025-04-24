@@ -34,15 +34,28 @@
         tap-ms = <100>;
     };
 
-    HomeRowMod_LftCmd: HomeRowMod_LftCmd {
+    HomeRowMod_CmdTab: HomeRowMod_CmdTab {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROWMOD_LFTCMD";
-        bindings = <&Lft_CMD_HomeRow_Mod>, <&key_repeat>;
+        label = "HOMEROWMOD_CMDTAB";
+        bindings = <&CmdTab>, <&key_repeat>;
 
         #binding-cells = <2>;
         tapping-term-ms = <200>;
         quick-tap-ms = <200>;
         hold-trigger-key-positions = <30>;
+        hold-trigger-on-release;
+    };
+
+    HoldCmdShftTab: HoldCmdShftTab {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOLDCMDSHFTTAB";
+        bindings = <&CmdShftTab>, <&key_repeat>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <200>;
+        hold-trigger-key-positions = <29>;
+        hold-trigger-on-release;
     };
 
     macros {
