@@ -150,9 +150,37 @@
             bindings = <&kp LEFT_GUI>;
             label = "LFT_CMD_HOMEROW_MOD";
         };
+
+        CmdTab: CmdTap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(TAB)>;
+            label = "CMDTAP";
+        };
+
+        CmdShftTab: CmdShftTab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LS(TAB))>;
+            label = "CMDSHFTTAB";
+        };
     };
 
     behaviors {
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        FDCombo {
+            bindings = <&CmdTab>;
+            key-positions = <30 29>;
+        };
+
+        DSCombo {
+            bindings = <&CmdShftTab>;
+            key-positions = <29 28>;
+        };
     };
 
     keymap {
