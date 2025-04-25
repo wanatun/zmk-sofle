@@ -332,3 +332,6 @@ combos:
   k: {t: V, h: '$$mdi:apple-keyboard-command$$'}
 - p: [27, 28]
   k: {t: Z, h: '$$mdi:apple-keyboard-command$$'}
+- p: [34, 35]
+  k: Gui+`
+  l: [LAYER0, '2', layer1]
