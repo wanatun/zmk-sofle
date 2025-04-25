@@ -20,14 +20,14 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <100>;
-    acceleration-exponent = <5>;
-    trigger-period-ms = <16>;
+    time-to-max-speed-ms = <120>;
+    acceleration-exponent = <3>;
+    trigger-period-ms = <10>;
 };
 
 &mt {
     flavor = "balanced";
-    tapping-term-ms = <300>;
+    tapping-term-ms = <350>;
 };
 
 / {
@@ -159,6 +159,15 @@
             bindings = <&kp LG(Z)>;
             key-positions = <27 28>;
         };
+
+        CmdSingleBacktick {
+            bindings = <&kp LG(GRAVE)>;
+            key-positions = <34 35>;
+            require-prior-idle-ms = <50>;
+            slow-release;
+            timeout-ms = <200>;
+            layers = <0 2 1>;
+        };
     };
 
     keymap {
@@ -187,7 +196,7 @@
             >;
 
             display-name = "layer1";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         layer_2 {
