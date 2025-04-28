@@ -20,14 +20,14 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <120>;
-    acceleration-exponent = <3>;
-    trigger-period-ms = <10>;
+    time-to-max-speed-ms = <200>;
+    acceleration-exponent = <2>;
+    trigger-period-ms = <9>;
 };
 
 &mt {
-    flavor = "balanced";
-    tapping-term-ms = <350>;
+    flavor = "tap-unless-interrupted";
+    tapping-term-ms = <400>;
 };
 
 / {
@@ -196,7 +196,7 @@
             >;
 
             display-name = "layer1";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         layer_2 {
